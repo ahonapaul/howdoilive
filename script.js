@@ -41,6 +41,4 @@ const day1 = {
     },
     //and more if i can think of some more factors
 };
-
-return;
 // console.log() can be changed with other things that can execute for final version
