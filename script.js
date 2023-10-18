@@ -9,11 +9,11 @@ const day1 = {
             if(notfood == 0){
                 console.log("full");
                 return;
-            }
+            };
             if(notfood == 1){
                 console.log("hungry");
                 return;
-            }
+            };
         },
     },
     
@@ -26,29 +26,29 @@ const day1 = {
             sleeptime = Math.floor(Math.random(sleephours) * sleephours.length);
 
             if(sleeptime == 0){
-                console.log("feeling dead");
+                console.log("dead");
                 return;
-            }
+            };
 
             if(sleeptime == 1){
-                console.log("feeling woozy");
+                console.log("woozy");
                 return;
-            }
+            };
 
             if(sleeptime == 2){
-                console.log("feeling okay");
+                console.log("okay");
                 return;
-            }
+            };
 
             if(sleeptime == 3){
-                console.log("feeling good");
+                console.log("good");
                 return;
-            }
+            };
 
             if(sleeptime == 4){
-                console.log("feeling refreshed");
+                console.log("refreshed");
                 return;
-            }
+            };
         }
     },
 
@@ -61,30 +61,66 @@ const day1 = {
             talktime = Math.floor(Math.random(talkhours) * 5);
 
             if(talktime == 0){
-                console.log("battery 100%");
+                console.log("100%");
                 return;
             };
 
             if(talktime == 1){
-                console.log("battery 75%");
+                console.log("75%");
                 return;
             };
 
             if(talktime == 2){
-                console.log("battery 60%");
+                console.log("60%");
                 return;
-            }
+            };
 
             if(talktime == 3){
-                console.log("battery 45%");
+                console.log("45%");
                 return;
-            }
+            };
 
             if(talktime == 4){
-                console.log("battery 20%");
+                console.log("20%");
                 return;
-            }
+            };
         }
     },
+
+    move:
+    {
+        time: 0.0,
+        distance: [0, 1, 2, 3, "more"],
+        feeling: function(movetime){
+            let movehours = this.distance;
+            movetime = Math.floor(Math.random(movehours) * this.distance.length);
+
+            if(movetime == 0){
+                console.log("static");
+                return;
+            };
+
+            if(movetime == 1){
+                console.log("unfit");
+                return;
+            };
+
+            if(movetime == 2){
+                console.log("moving");
+                return;
+            };
+
+            if(movetime == 3){
+                console.log("fit");
+                return;
+            };
+
+            if(movetime == 4){
+                console.log("tired");
+                return;
+            };
+        }
+
+    }
 };
 // console.log() can be changed with other things that can execute for final version
