@@ -2,7 +2,7 @@ const day1 = {
     meal: 
     {   
         time: 0.0,
-        food: [food1, food2, food3],
+        food: ["food1", "food2", "food3"],
         feeling: function(notfood){
             let stomachcap = [0, 1];
             notfood = Math.floor(Math.random(stomachcap) * 2);
@@ -55,7 +55,7 @@ const day1 = {
     social: 
     {
         time: 2.75,
-        people: [name1, name2, name3],
+        people: ["name1", "name2", "name3"],
         feeling: function(talktime){
             let talkhours = [0, 1, 2, 3, 4];
             talktime = Math.floor(Math.random(talkhours) * 5);
@@ -123,4 +123,5 @@ const day1 = {
 
     }
 };
+
 // console.log() can be changed with other things that can execute for final version
