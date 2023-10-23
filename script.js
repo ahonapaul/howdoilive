@@ -1,11 +1,11 @@
 const day1 = {
     meal: 
     {   
-        time: 0.0,
-        food: ["food1", "food2", "food3"],
+        time: 3,
+        food: ["bread", "rice", "veggies", "fruits"],
         feeling: function(notfood){
             let stomachcap = [0, 1];
-            notfood = Math.floor(Math.random(stomachcap) * 2);
+            notfood = Math.floor(Math.random(stomachcap) * stomachcap.length);
             if(notfood == 0){
                 console.log("full");
                 return;
@@ -123,5 +123,3 @@ const day1 = {
 
     }
 };
-
-// console.log() can be changed with other things that can execute for final version
