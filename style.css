@@ -54,7 +54,7 @@ body{
     position: absolute;
     display: flex;
     align-items: flex-end;
-    background-color: black;
+    background-image: url(media/IMG_2147.jpg); /*placeholder image for now */
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -86,4 +86,14 @@ button{
 button:hover{
     color: greenyellow;
     background-color: grey;
+}
+
+.bg{
+    opacity: 20%;
+    z-index: 2;
+}
+
+.data2{
+    margin-top: -135vh;
+    z-index: 1;
 }

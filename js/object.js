@@ -1,18 +1,16 @@
 const day1 = {
     meal: 
     {   
-        time: 3,
-        food: ["bread", "rice", "veggies", "fruits"],
-        feeling: function(notfood){
-            let stomachcap = [0, 1];
-            notfood = Math.floor(Math.random(stomachcap) * stomachcap.length);
+        stomachcap: [0, 1],
+        feeling: function(food){
+            food = Math.floor(Math.random(this.stomachcap) * this.stomachcap.length);
 
             let val;
 
-            if(notfood == 0){
+            if(food == 0){
                 val = "100%"
             };
-            if(notfood == 1){
+            if(food == 1){
                 val = "0%"
             };
 
@@ -22,11 +20,9 @@ const day1 = {
     
     sleep: 
     {
-        time: 0.0,
-        disturbances: 2,
+        sleephours: [3, 4, 5, 6, 7],       
         feeling: function(sleeptime){
-            let sleephours = [3, 4, 5, 6, 7];
-            sleeptime = Math.floor(Math.random(sleephours) * sleephours.length);
+            sleeptime = Math.floor(Math.random(this.sleephours) * this.sleephours.length);
 
             let val;
 
@@ -56,7 +52,6 @@ const day1 = {
 
     social: 
     {
-        time: 2.75,
         people: [0, 1, 2, 3, 4],
         feeling: function(talktime){
             talktime = Math.floor(Math.random(this.people) * 5);
@@ -88,7 +83,6 @@ const day1 = {
 
     move:
     {
-        time: 0.0,
         distance: [0, 1, 2, 3, "more"],
         feeling: function(movetime){
             let movehours = this.distance;
@@ -121,7 +115,10 @@ const day1 = {
     }
 };
 
-function onHover(className){
+let className;
+
+function onHover(className){ //page1 hovers
+
     let element = document.querySelector(className);
 
     if(className == '.meal'){
@@ -143,9 +140,43 @@ function onHover(className){
         element.innerHTML = day1.move.feeling();
         element.style.color = "greenyellow";
     }
+
 }
 
-function onOut(className){
+function onClick(){
+
+    let mealElem = document.querySelector(".meal2");
+
+    mealElem.addEventListener('click', function(){
+        mealElem.innerHTML = day1.meal.feeling();
+        mealElem.style.color = "greenyellow";
+    })
+
+    let sleepElem = document.querySelector(".sleep2");
+
+    sleepElem.addEventListener('click', function(){
+        sleepElem.innerHTML = day1.sleep.feeling();
+        sleepElem.style.color = "greenyellow";
+    })
+
+    let socialElem = document.querySelector(".social2");
+
+    socialElem.addEventListener('click', function(){
+        socialElem.innerHTMl = day1.social.feeling();
+        socialElem.style.color = "greenyellow";
+    })
+
+    let moveElem = document.querySelector(".move2");
+
+    moveElem.addEventListener('click', function(){
+        moveElem.innerHTMl = day1.move.feeling();
+        moveElem.style.color = "greenyellow";
+    })
+
+}
+
+function onOut(className){ //page 1 onout
+
     let element = document.querySelector(className);
 
     if(className == ".meal"){
