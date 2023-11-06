@@ -6,69 +6,11 @@ asking how I survived based on what I ate, how much I slept, or other factors. S
 feel right that I'm still alive with how self-destructive I can get, so this data will be a deep dive 
 into that question: how do I live?
 
-Sample data set:
-
-let day1 = {
-    meal{
-        time: 0.0,
-        food: [food1, food2, food3],
-        feeling: function(notfood){
-            let stomachcap = [0, 1];
-            let notfood = Math.floor(Math.random() * 2);
-            if(notfood == 0){
-                console.log("feeling good");
-                return;
-            }
-            if(notfood == 1){
-                console.log("feeling weird");
-                return;
-            }
-        },
-    },
-    sleep{
-        time: 7.5,
-        disturbances: 2,
-        feeling: funtion(sleeptime){
-            let hours = [3, 4, 5, 6, 7];
-            sleeptime = Math.floor(Math.random() * 5);
-
-            if(sleeptime == 0){
-                console.log("feeling woozy");
-                return;
-            };
-
-            if(sleeptime == 1){
-                console.log("feeling tired");
-                return;
-            };
-
-            //and so on
-
-        }
-    },
-    social{
-        time: 2.75,
-        people: [name1, name2, name3],
-        feeling: function(talktime){
-            let hours = [0, 1, 2, 3, 4];
-            talktime = Math.floor(Math.random() * 5);
-
-            if(talktime == 0){
-                console.log("battery 100%");
-                return;
-            };
-
-            if(talktime == 1){
-                console.log("battery 75%");
-                return;
-            };
-
-            //and so on
-        }
-    },
-
-    //and more if i can think of some more factors
-
-}
-
-// console.log() can be changed with other things that can execute for final version
+Nov 1 update (page1.html)
+- how is the data going to be displayed
+    - randomise an output, display when mouseover the element
+        (run the feeling function on hover everytime)
+        (tie together feeling function with the other parameters)
+    - click to explore stat
+        (have a page with all the potential options)
+        (link to other stat pages)

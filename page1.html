@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="screen">
+        <div class="cover">
+            <div id="drag">
+                <img id="draghead" src="aloharotation0001-0125.gif">
+            </div>
+        </div>
+        <div class="data">
+            <h1 
+                class="meal" 
+                onmouseover="onHover('.meal')" 
+                onmouseleave="onOut('.meal')">
+            HEALTH
+            </h1>
+            <h1 
+                class="sleep" 
+                onmouseover="onHover('.sleep')" 
+                onmouseleave="onOut('.sleep')">
+            ENERGY
+            </h1>
+            <h1 
+                class="social" 
+                onmouseover="onHover('.social')" 
+                onmouseleave="onOut('.social')">
+            COMMS
+            </h1>
+            <h1 
+                class="move" 
+                onmouseover="onHover('.move')" 
+                onmouseleave="onOut('.move')">
+            SPEED
+            </h1>
+        </div>
+        <button onclick="openPage('page2.html')">See Detailed Stats</button>
+        <button onclick="openPage('index.html')">Return</button>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/object.js"></script>
+</body>
+</html>
